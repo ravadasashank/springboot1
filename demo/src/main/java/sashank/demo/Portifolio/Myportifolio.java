@@ -11,8 +11,8 @@ public class Myportifolio {
                 <h1>Myself</h1>
                 <p>I am Ravada Sashank, I am a cloud and security Enthusiast </p>
                 <ul>
-                    <li>Github:https://github.com/ravadasashank</li>
-                    <li>Linkdin:linkedin.com/in/ravadasashank444/</li>
+                    <li>Github: https://github.com/ravadasashank</li>
+                    <li>Linkdin: https://linkedin.com/in/ravadasashank444/</li>
                 
                 </ul>""";
     }
@@ -34,10 +34,17 @@ public class Myportifolio {
                 </ul>""";
     }
     @GetMapping("/education")
-    void Education(){
+    public String Education(){
+        return """
+                <h1>Education:</h1>
+                <p>I am studying Btech CSE in third year</p>
+                """;
     }
     @GetMapping("/projects")
-    void Project(){
-
+    public String Project(){
+        return """
+                <h1>Projects:</h1>
+                <p> I created a cloud project which helps to keep track of attendence in cloud with high relilability
+               .""";
     }
 }
