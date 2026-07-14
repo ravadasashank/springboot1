@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Myportifolio {
-    @GetMapping("/myself")
+    @GetMapping("/")
     public String Myself(){
         return """
                 <h1>Myself</h1>
