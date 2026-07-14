@@ -31,7 +31,7 @@ public class Student {
     }
 
     public void setDept(String dept) {
-        dept = dept;
+        this.dept = dept;
     }
 
     public void setAge(int age) {
