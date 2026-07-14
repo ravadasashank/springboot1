@@ -19,13 +19,17 @@ public class Myportifolio {
     @GetMapping("/skills")
     public String Skills(){
         return """
-                <h1>Skills</h1>
+                <h1>Skills:</h1>
                 <p>I have cloud and security skills</p>
                 <ul>
                     <li>AWS<li>
                     <li>Cloud Security</li>
                     <li>Cloud Software</li>
-                    <li>Vulnerability Detection</li>
+                    <li>Vulnerability Aversion</li>
+                    <li>IAM Security</li>
+                    <li>Blockchain</li>
+                    <li>Blockchain Security</li>
+                    <li>Smart Contract Security</li>
                 
                 </ul>""";
     }
