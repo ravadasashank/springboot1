@@ -22,7 +22,8 @@ public class StudentService {
             return null;
         }
 
-      //  studentRepository.Informationsave(student);
+       studentRepository.save(student);
+
 
         return student;
     }
