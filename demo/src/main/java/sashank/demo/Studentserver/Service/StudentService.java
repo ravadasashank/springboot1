@@ -33,4 +33,8 @@ public class StudentService {
     public Student getStudentById(Integer id) {
             return studentRepository.findById(id).orElse(null);
     }
+
+    public Student updateStudent(int id){
+            return  studentRepository.findById(id).orElse(null);
+    }
 }

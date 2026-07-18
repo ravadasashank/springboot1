@@ -33,4 +33,9 @@ public class StudentController {
         return ResponseEntity.status(200).body(student);
     }
 
+    @PostMapping("/update/{id}")
+    public ResponseEntity<Student> updateStudent(@PathVariable int id, @RequestBody Student student){
+        Student updatedStudent=studentService.updateStudent(id);
+        return ResponseEntity.status(200).body(updatedStudent);
+    }
 }
