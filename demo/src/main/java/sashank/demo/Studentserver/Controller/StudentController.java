@@ -14,16 +14,17 @@ public class StudentController {
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
+    @CrossOrigin
     @PostMapping("/create")
-    public ResponseEntity<Student> StoreStudent(@RequestBody Student student){
+    public String StoreStudent(@RequestBody Student student){
 //
-        Student result=studentService.studentvalidate(student);
+        return studentService.studentvalidate(student);
 
 
-        if(result==null){
-            return ResponseEntity.status(400).body(result);
-        }
-        return ResponseEntity.status(201).body(result);
+//        if(result==null){
+//            return ResponseEntity.status(400).body(result);
+//        }
+//        return ResponseEntity.status(201).body(result);
 
     }
 
