@@ -1,7 +1,9 @@
-package sashank.demo.Studentserver;
+package sashank.demo.Studentserver.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sashank.demo.Studentserver.Repository.StudentRepository;
+import sashank.demo.Studentserver.Entity.Student;
 
 @Service
 public class StudentService {
@@ -26,5 +28,9 @@ public class StudentService {
 
 
         return student;
+    }
+
+    public Student getStudentById(Integer id) {
+            return studentRepository.findById(id).orElse(null);
     }
 }

@@ -1,7 +1,7 @@
-package sashank.demo.Studentserver;
+package sashank.demo.Studentserver.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import sashank.demo.Studentserver.Entity.Student;
 
 
 public interface StudentRepository extends JpaRepository<Student,Integer> {

@@ -1,4 +1,4 @@
-package sashank.demo.Studentserver;
+package sashank.demo.Studentserver.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
