@@ -38,4 +38,10 @@ public class StudentController {
         Student updatedStudent=studentService.updateStudent(id);
         return ResponseEntity.status(200).body(updatedStudent);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteStudent(@PathVariable int id){
+        studentService.deleteStudent(id);
+        return ResponseEntity.status(200).body("Student deleted Successfully");
+    }
 }
