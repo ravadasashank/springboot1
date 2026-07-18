@@ -27,15 +27,15 @@ public class StudentController {
 
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/get")
     public ResponseEntity<Student> getStudentById(@PathVariable int id){
         Student student=studentService.getStudentById(id);
         return ResponseEntity.status(200).body(student);
     }
 
-    @PostMapping("/update/{id}")
-    public ResponseEntity<Student> updateStudent(@PathVariable int id, @RequestBody Student student){
-        Student updatedStudent=studentService.updateStudent(id);
+    @PutMapping("/update")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student){
+        Student updatedStudent=studentService.updateStudent(student);
         return ResponseEntity.status(200).body(updatedStudent);
     }
 
@@ -44,4 +44,6 @@ public class StudentController {
         studentService.deleteStudent(id);
         return ResponseEntity.status(200).body("Student deleted Successfully");
     }
+
+
 }
