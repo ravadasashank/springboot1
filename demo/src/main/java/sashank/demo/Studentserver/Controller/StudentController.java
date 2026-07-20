@@ -6,6 +6,7 @@ import sashank.demo.Studentserver.Entity.Student;
 import sashank.demo.Studentserver.Service.StudentService;
 import org.springframework.web.bind.annotation.*;
 import sashank.demo.dto.StudentRequestDTO;
+import sashank.demo.dto.StudentResponseDTO;
 
 @RestController
 public class StudentController {
@@ -17,16 +18,9 @@ public class StudentController {
     }
     @CrossOrigin
     @PostMapping("/create")
-    public String StoreStudent(@RequestBody StudentRequestDTO studentRequestDTO){
-//
-        return studentService.studentvalidate(studentRequestDTO);
-
-
-//        if(result==null){
-//            return ResponseEntity.status(400).body(result);
-//        }
-//        return ResponseEntity.status(201).body(result);
-
+    public ResponseEntity<?> storeStudent(@RequestBody StudentRequestDTO createStudentRequestDTO) {
+        StudentResponseDTO result = studentService.studentValidate(createStudentRequestDTO);
+        return ResponseEntity.ok(result);
     }
 
     @GetMapping("/get")

@@ -18,7 +18,7 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    public StudentResponseDTO studentvalidate(StudentRequestDTO studentRequestDTO) {
+    public StudentResponseDTO studentValidate(StudentRequestDTO studentRequestDTO) {
 
 
 //        int id = student.getId();
