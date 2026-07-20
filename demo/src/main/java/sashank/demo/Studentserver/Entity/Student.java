@@ -54,4 +54,11 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void setCreatedAt(LocalDateTime now) {
+        this.createdAt = now;
+    }
+    public void setUpdatedAt(LocalDateTime now) {
+        this.updatedAt = now;
+    }
 }

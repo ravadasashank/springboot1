@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import sashank.demo.Studentserver.Entity.Student;
 import sashank.demo.Studentserver.Service.StudentService;
 import org.springframework.web.bind.annotation.*;
+import sashank.demo.dto.StudentRequestDTO;
 
 @RestController
 public class StudentController {
@@ -16,9 +17,9 @@ public class StudentController {
     }
     @CrossOrigin
     @PostMapping("/create")
-    public String StoreStudent(@RequestBody Student student){
+    public String StoreStudent(@RequestBody StudentRequestDTO studentRequestDTO){
 //
-        return studentService.studentvalidate(student);
+        return studentService.studentvalidate(studentRequestDTO);
 
 
 //        if(result==null){
