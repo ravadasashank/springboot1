@@ -1,8 +1,8 @@
 package sashank.demo.Studentserver.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedBy;
@@ -12,9 +12,14 @@ import java.time.LocalDateTime;
 @Entity
 public class Student {
     @Id
+            @GeneratedValue(strategy = GenerationType.IDENTITY)
+            @NotBlank
     int id;
+    @NotBlank
     String name;
+    @NotBlank
     String dept;
+    @Min(value = 18, message = "Age should be more than 18")
     int age;
 
     @CreationTimestamp
