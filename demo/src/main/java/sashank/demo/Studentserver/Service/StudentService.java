@@ -11,12 +11,14 @@ import java.time.LocalDateTime;
 
 @Service
 public class StudentService {
-        StudentRepository studentRepository;
-        @Autowired
+    StudentRepository studentRepository;
+
+    @Autowired
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
-    public String studentvalidate(StudentRequestDTO studentRequestDTO) {
+
+    public StudentResponseDTO studentvalidate(StudentRequestDTO studentRequestDTO) {
 
 
 //        int id = student.getId();
@@ -38,15 +40,15 @@ public class StudentService {
 
 
     public Student getStudentById(Integer id) {
-            return studentRepository.findById(id).orElse(null);
+        return studentRepository.findById(id).orElse(null);
     }
 
     public Student updateStudent(Student student) {
-            return  studentRepository.save(student);
+        return studentRepository.save(student);
     }
 
-    public Student deleteStudent(int id){
-            return  studentRepository.findById(id).orElse(null);
+    public Student deleteStudent(int id) {
+        return studentRepository.findById(id).orElse(null);
     }
 
     private Student mapToStudent(StudentRequestDTO createStudentRequestDTO) {
@@ -70,3 +72,4 @@ public class StudentService {
 
         return createStudentResponseDTO;
     }
+}
