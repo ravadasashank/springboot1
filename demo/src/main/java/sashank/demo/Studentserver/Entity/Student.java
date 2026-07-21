@@ -12,14 +12,14 @@ import java.time.LocalDateTime;
 @Entity
 public class Student {
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
-            @NotBlank
+     //       @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //        @NotBlank
     int id;
-    @NotBlank
+  //  @NotBlank
     String name;
-    @NotBlank
+  //  @NotBlank
     String dept;
-    @Min(value = 18, message = "Age should be more than 18")
+ //   @Min(value = 18, message = "Age should be more than 18")
     int age;
 
     @CreationTimestamp

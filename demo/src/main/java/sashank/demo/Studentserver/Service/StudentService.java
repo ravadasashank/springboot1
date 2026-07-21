@@ -39,7 +39,7 @@ public class StudentService {
     }
 
 
-    public Student getStudentById(Integer id) {
+    public Student getStudentById(Integer id){
         return studentRepository.findById(id).orElse(null);
     }
 

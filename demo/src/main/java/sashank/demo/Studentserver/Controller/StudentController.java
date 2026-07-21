@@ -23,10 +23,14 @@ public class StudentController {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/get")
-    public ResponseEntity<Student> getStudentById(@PathVariable int id){
-        Student student=studentService.getStudentById(id);
-        return ResponseEntity.status(200).body(student);
+    @GetMapping("/get/{id}")
+//    public ResponseEntity<Student> getStudentById (@PathVariable int id) throws Exception {
+//        Student student=studentService.getStudentById(id);
+//        return ResponseEntity.ok(student);
+//    }
+    public ResponseEntity<?> getStudentById(@PathVariable Integer id) throws Exception{
+        Student student = studentService.getStudentById(id);
+        return ResponseEntity.ok(student);
     }
 
     @PutMapping("/update")
